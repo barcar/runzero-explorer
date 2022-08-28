@@ -2,6 +2,8 @@ version: "3.5"
 services:
   runzero-explorer:
     build: .
+      args:
+        - AGENT_URL=${AGENT_URL}
     container_name: runzero-explorer
     privileged: true
     restart: unless-stopped
