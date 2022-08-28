@@ -1,7 +1,8 @@
 version: "3.5"
 services:
   runzero-explorer:
-    build: .
+    build:
+      context: .
       args:
         - AGENT_URL=${AGENT_URL}
     container_name: runzero-explorer
