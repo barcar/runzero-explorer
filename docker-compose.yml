@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  runzero-explorer:
+    build: .
+    container_name: runzero-explorer
+    privileged: true
+    restart: unless-stopped
+    network_mode: host
+    stdin_open: true 
+    tty: true
+    environment:
+      - TZ=Europe/London
+      
