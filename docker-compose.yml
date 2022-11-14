@@ -5,7 +5,6 @@ services:
       context: .
       args:
         - AGENT_URL=${AGENT_URL}
-        - RUMBLE_AGENT_HOST_ID=${RUMBLE_AGENT_HOST_ID}
     container_name: runzero-explorer
     privileged: true
     restart: unless-stopped
