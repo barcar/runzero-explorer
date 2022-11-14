@@ -7,9 +7,13 @@ FROM debian:stable-slim
 WORKDIR /opt/runzero
 
 RUN apt update && \
-    apt install -y chromium   # add wireless-tools if you want WiFi scanning
+    apt install -y chromium curl # add wireless-tools if you want WiFi scanning
 
-ADD ${AGENT_URL} runzero-explorer.bin
+ARG AGENT_URL
+ARG RUMBLE_AGENT_HOST_ID
+
+RUN echo "$AGENT_URL"
+RUN curl -o runzero-explorer.bin "${AGENT_URL}"
 
 RUN chmod +x runzero-explorer.bin
 
