@@ -8,7 +8,6 @@ services:
     container_name: runzero-explorer
     privileged: true
     restart: unless-stopped
-    network_mode: host
     stdin_open: true 
     tty: true
     environment:
