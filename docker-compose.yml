@@ -16,6 +16,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - runzero_data:/mnt
       - /var/lib/docker/volumes/runzero_data/_data/.env:/opt/rumble/bin/.env
+    network_mode: host
 volumes:
   runzero_data:
     external: true
